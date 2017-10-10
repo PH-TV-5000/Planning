@@ -1,3 +1,6 @@
+Revision 1 of the specs. Will change.
+
+
 ```
 Hardware Features:
     CPU: MOS 6502, 3MHz
