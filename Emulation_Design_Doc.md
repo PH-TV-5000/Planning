@@ -1,12 +1,12 @@
 ---- Brainstorming ----
 -- General Ideas --
 1st idea:
-	The system will be simulated at a high level using an object (to represent the hardware system and OS)
-	and the execution will be done by calling the objects methods. The methods will handle all the delays etc
+    The system will be simulated at a high level using an object (to represent the hardware system and OS)
+    and the execution will be done by calling the objects methods. The methods will handle all the delays etc
 
 2nd idea:
-	Same as the first idea except separate the hardware and the OS objects
-	
+    Same as the first idea except separate the hardware and the OS objects
+    
 2nd idea will be the way to go I feel
 
 -- System Description --
@@ -25,117 +25,117 @@ Memory, Drawing, Maths, Comparison, Branching, I/O, Cart, Misc (to be expanded o
 Please note: This is hardware system level features, not library or OS level.
 
 Memory:
-	getByte
-	setByte
-	-- Possibly get or set a specified length of memory (more than a byte)
+    getByte
+    setByte
+    -- Possibly get or set a specified length of memory (more than a byte)
 
 Drawing:
-	blitDisplay
-	
+    blitDisplay
+    
 Maths:
-	add and sub
-	mult and div
-	modulo
-	shift left right
-	increment and decrement
-	rand
+    add and sub
+    mult and div
+    modulo
+    shift left right
+    increment and decrement
+    rand
 
 Comparison:
-	greater less than
-	greater than equal
-	less than equal
-	equal to
-	not and or xor
+    greater less than
+    greater than equal
+    less than equal
+    equal to
+    not and or xor
 
 Branching:
-	jump
-	call
-	return
+    jump
+    call
+    return
 
 I/O:
-	--TODO:
+    --TODO:
 
 Cart:
-	--TODO:
+    --TODO:
 
 Misc:
-	nop
+    nop
 
 
 The low-level OS service-level system will have commands in these categories:
 Memory, Drawing, Text Graphics, Music, Maths, Control Flow, I/O, Cart, Misc (To be expanded on as needed)
 
 Memory:
-	memcpy (And a few other C-like functions)
+    memcpy (And a few other C-like functions)
 
 Drawing:
-	drawPixel
-	drawLine
-	drawRectangle (normal and filled)
-	drawCircle (normal and filled)
-	drawSprite
-	setClipRegion
-	getPixel
-	clear
-	setViewport
-	(Some sort of screen or region-wide colour change or modifier)
-	
+    drawPixel
+    drawLine
+    drawRectangle (normal and filled)
+    drawCircle (normal and filled)
+    drawSprite
+    setClipRegion
+    getPixel
+    clear
+    setViewport
+    (Some sort of screen or region-wide colour change or modifier)
+    
 Text Graphics:
-	get/setCursor
-	print
-	println
-	
+    get/setCursor
+    print
+    println
+    
 Music:
-	playMusicSequence
-	playMusicNote
-	
+    playMusicSequence
+    playMusicNote
+    
 Maths:
-	max min
-	floor ceil
-	sin cos tan
-	sqrt
-	abs
-	setRandSeed
+    max min
+    floor ceil
+    sin cos tan
+    sqrt
+    abs
+    setRandSeed
 
 Control Flow:
-	if
-	for
-	while
-	(possibly some others?)
+    if
+    for
+    while
+    (possibly some others?)
 
 I/O:
-	getControllerInput
-	(Possibly some GPIO stuff)
-	
+    getControllerInput
+    (Possibly some GPIO stuff)
+    
 Cart:
-	--TODO:
+    --TODO:
 
 Misc:
-	delayCycles
-	--TODO:
-	
+    delayCycles
+    --TODO:
+
 -- Hardware Descriptions --
 Display:
-	--TODO:
+    --TODO:
 
 Audio:
-	--TODO:
+    --TODO:
 
 Controller:
-	--TODO:
+    --TODO:
 
 Control "Registers":
-	--TODO:
-	
+    --TODO:
+
 
 -- Class Designs --
 Struct PHTVPixel:
-	uint16_t R : 5
-	uint16_t G : 5
-	uint16_t B : 5
+    uint16_t R : 5
+    uint16_t G : 5
+    uint16_t B : 5
 
 Class PHTVSystem:
-	Member Variables:
-		uint16_t displayArray[70][70]
-	Methods:
-		--TODO:
+    Member Variables:
+        uint16_t displayArray[70][70]
+    Methods:
+        --TODO:
