@@ -1,4 +1,12 @@
 # Brainstorming
+## Table of Contents
+* [General Ideas](#general-ideas)
+* [System Description](#system-description)
+  * [Hardware System-level Functions](#hardware-system-level-functions)
+  * [OS-level Functions](#os-level-functions)
+* [Hardware Descriptions](#hardware-descriptions)
+* [Class Designs](#class-designs)
+
 ## General Ideas
 ### 1st idea
 The system will be simulated at a high level using an object (to represent the hardware system and OS)
@@ -9,6 +17,7 @@ Same as the first idea except separate the hardware and the OS objects
 
 ### Decision 
 2nd idea will be the way to go I feel
+
 
 ## System Description
 The way it would work is we have the hardware level which effectively provides all the hardware states etc,
@@ -116,6 +125,7 @@ getControllerInput
 #### Misc
 delayCycles
 --TODO:
+
 
 ## Hardware Descriptions
 ### Display
