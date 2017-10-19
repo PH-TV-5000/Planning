@@ -1,4 +1,5 @@
 ---- Brainstorming ----
+-- General Ideas --
 1st idea:
 	The system will be simulated at a high level using an object (to represent the hardware system and OS)
 	and the execution will be done by calling the objects methods. The methods will handle all the delays etc
@@ -6,9 +7,9 @@
 2nd idea:
 	Same as the first idea except separate the hardware and the OS objects
 	
-
 2nd idea will be the way to go I feel
 
+-- System Description --
 The way it would work is we have the hardware level which effectively provides all the hardware states etc,
 but also provides all the methods to do CPU level instructions. Its interface will consist of methods that
 will resemble assembly opcodes
@@ -112,7 +113,22 @@ Cart:
 Misc:
 	delayCycles
 	--TODO:
+	
+-- Hardware Descriptions --
+Display:
+	--TODO:
 
+Audio:
+	--TODO:
+
+Controller:
+	--TODO:
+
+Control "Registers":
+	--TODO:
+	
+
+-- Class Designs --
 Struct PHTVPixel:
 	uint16_t R : 5
 	uint16_t G : 5
