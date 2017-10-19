@@ -1,6 +1,6 @@
 # Planning
 All Planning will happen here.
 
-See Specs in [Specs.md](Specs.md)
+Specs of the emulated system are located in [Specs.md](Specs.md)
 
-Software specs are in [Software\_Specs.md](Software_Specs.md)
+Emulator internals design docs and specs are located in are in [Emulation Design Doc.md](Emulation Design Doc.md)
