@@ -86,10 +86,10 @@ drawLine
 drawRectangle (normal and filled)
 drawCircle (normal and filled)
 drawSprite
-setClipRegion
+setViewport
 getPixel
 clear
-setViewport
+setScreenOffset
 (Some sort of screen or region-wide colour change or modifier)
 
 #### Text Graphics
@@ -129,7 +129,11 @@ delayCycles
 
 ## Hardware Descriptions
 ### Display
---TODO:
+70x70 Pixel display buffer. Each Pixel is 2 bytes
+5 bits per colour channel with 1 bit for a transparency flag (only applicable with the drawing functions)
+This allows 32 shades of each colour to be displayed
+All drawing ops work on the buffer in ram. When it is to be displayed, the program
+will call the blitScreen function and the buffer will be copied to the display
 
 ### Audio
 --TODO:
@@ -138,7 +142,26 @@ delayCycles
 --TODO:
 
 ### Control "Registers"
---TODO:
+Screen X Offset
+Screen Y Offset
+Viewport X
+Viewport Y
+Viewport W
+Viewport H
+
+Cursor Column
+Cursor Row
+Text Terminal Array
+
+
+## System Memory Map
+0x0000-0xXXXX Control "Registers"
+0xXXXX - 0x5974 RAM
+0x5974 - 0x5976 USB Buffers
+0x5976 - 0x5978 Controller Buffers
+0x5978 - 0x59b8 GPIO Pins (64 bytes)
+0x59b8 - 0x7fff Screen Buffer (9,800)
+0x7fff Cartridge Memory (32k)
 
 
 ## Class Designs
@@ -147,6 +170,7 @@ Struct PHTVPixel:
 	uint16_t R : 5
 	uint16_t G : 5
 	uint16_t B : 5
+	uint16_t A : 1
 
 Class PHTVSystem:
 	Member Variables:
